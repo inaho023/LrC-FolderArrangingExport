@@ -1,0 +1,2 @@
+# LightroomClassic-FolderArrangingExport
+Lightroom Classicのフォルダー仕分けエクスポートプラグイン
