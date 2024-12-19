@@ -18,7 +18,6 @@ FolderArrangingExportTask = {}
 local function getBaseName( fullPath )
 	-- 変数定義
 	local indexStart
-	local indexEnd
 	local baseName
 	-- フルパスからパスと拡張子を削除
 	baseName = lrPathUtils.removeExtension( lrPathUtils.leafName( fullPath ) )
