@@ -1,2 +1,5 @@
-# LightroomClassic-FolderArrangingExport
-Lightroom Classicのフォルダー仕分けエクスポートプラグイン
+# フォルダー自動振り分けエクスポートプラグイン for Lightroom Classic
+
+## 概要
+
+Lightroom Classicのエクスポート機能には出力フォルダー下でファイルを整理する機能がないため、Exifやなどの情報を参照してフォルダーへ自動的に振り分ける機能を作ってみました。

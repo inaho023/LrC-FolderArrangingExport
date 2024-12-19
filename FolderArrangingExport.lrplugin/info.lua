@@ -1,5 +1,5 @@
 --[[----------------------------------------------------------------------------
-フォルダー仕分け書き出しプラグイン
+フォルダー自動振り分けエクスポート for Lightroom Classic
 ----------------------------------------------------------------------------]]--
 return {
 
@@ -9,10 +9,10 @@ return {
 
 	LrToolkitIdentifier = 'space.inaho.folder_arranging_export' ,
 
-	LrPluginName = LOC '$$$/FolderArrangingExport/PluginName=フォルダー仕分けエクスポート' ,
+	LrPluginName = LOC '$$$/FolderArrangingExport/PluginName=フォルダー自動振り分けエクスポート for Lightroom Classic' ,
 
 	LrExportServiceProvider = {
-		title = 'フォルダー仕分けエクスポート' ,
+		title = 'フォルダー自動振り分けエクスポート for Lightroom Classic' ,
 		file = 'FolderArrangingExportServiceProvider.lua' ,
 	} ,
 
