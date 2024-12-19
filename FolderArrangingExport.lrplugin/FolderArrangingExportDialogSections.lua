@@ -14,7 +14,7 @@ local function updateExportStatus( propertyTable )
 	local message = nil
 
 	repeat
-		-- 仕分けルール１
+		-- 振り分けルール１
 		if propertyTable.arrangeRuleChoise1 == '' then
 			propertyTable.arrangeRuleCustomText1 = ''
 			propertyTable.arrangeRuleChoise2 = ''
@@ -35,7 +35,7 @@ local function updateExportStatus( propertyTable )
 			message = 'カスタムテキスト１を入力してください。'
 			break
 		end
-		-- 仕分けルール２
+		-- 振り分けルール２
 		if propertyTable.arrangeRuleChoise2 == '' then
 			propertyTable.arrangeRuleCustomText2 = ''
 			propertyTable.arrangeRuleChoise3 = ''
@@ -54,7 +54,7 @@ local function updateExportStatus( propertyTable )
 			message = 'カスタムテキスト２を入力してください。'
 			break
 		end
-		-- 仕分けルール３
+		-- 振り分けルール３
 		if propertyTable.arrangeRuleChoise3 == '' then
 			propertyTable.arrangeRuleCustomText3 = ''
 			propertyTable.arrangeRuleChoise4 = ''
@@ -71,7 +71,7 @@ local function updateExportStatus( propertyTable )
 			message = 'カスタムテキスト３を入力してください。'
 			break
 		end
-		-- 仕分けルール４
+		-- 振り分けルール４
 		if propertyTable.arrangeRuleChoise4 == '' then
 			propertyTable.arrangeRuleCustomText4 = ''
 			propertyTable.arrangeRuleChoise5 = ''
@@ -86,7 +86,7 @@ local function updateExportStatus( propertyTable )
 			message = 'カスタムテキスト４を入力してください。'
 			break
 		end
-		-- 仕分けルール４
+		-- 振り分けルール４
 		if propertyTable.arrangeRuleChoise5 == '' then
 			propertyTable.arrangeRuleCustomText5 = ''
 			break
@@ -145,11 +145,11 @@ function FolderArrangingExportDialogSections.sectionsForBottomOfDialog( _, prope
 	local result = {
 
 		{
-			title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRule=仕分けルール',
+			title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRule=振り分けルール',
 
 			f:row {
 				f:static_text {
-					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise1=仕分けルール１ :',
+					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise1=振り分けルール１ :',
 					alignment = 'right',
 					width = share 'labelWidth'
 				},
@@ -192,7 +192,7 @@ function FolderArrangingExportDialogSections.sectionsForBottomOfDialog( _, prope
 			},
 			f:row {
 				f:static_text {
-					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise2=仕分けルール２ :',
+					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise2=振り分けルール２ :',
 					alignment = 'right',
 					width = share 'labelWidth',
 					visible = lrBinding.keyIsNot( 'arrangeRuleChoise1' , '' , propertyTable),
@@ -236,7 +236,7 @@ function FolderArrangingExportDialogSections.sectionsForBottomOfDialog( _, prope
 			},
 			f:row {
 				f:static_text {
-					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise3=仕分けルール３ :',
+					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise3=振り分けルール３ :',
 					alignment = 'right',
 					width = share 'labelWidth',
 					visible = lrBinding.keyIsNot( 'arrangeRuleChoise2' , '' ),
@@ -280,7 +280,7 @@ function FolderArrangingExportDialogSections.sectionsForBottomOfDialog( _, prope
 			},
 			f:row {
 				f:static_text {
-					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise4=仕分けルール４ :',
+					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise4=振り分けルール４ :',
 					alignment = 'right',
 					width = share 'labelWidth',
 					visible = lrBinding.keyIsNot( 'arrangeRuleChoise3' , '' ),
@@ -324,7 +324,7 @@ function FolderArrangingExportDialogSections.sectionsForBottomOfDialog( _, prope
 			},
 			f:row {
 				f:static_text {
-					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise5=仕分けルール５ :',
+					title = LOC '$$$/FolderArrangingExport/ExportDialog/ArrangeRuleChoise5=振り分けルール５ :',
 					alignment = 'right',
 					width = share 'labelWidth',
 					visible = lrBinding.keyIsNot( 'arrangeRuleChoise4' , '' ),

@@ -90,7 +90,7 @@ function FolderArrangingExportTask.processRenderedPhotos( functionContext, expor
 	local exportSession	= exportContext.exportSession
 	local exportParams	= exportContext.propertyTable
 	local exportPhoto 	= nil
-	local progressScope	= exportContext:configureProgress { title = 'フォルダー仕分け書き出し（ ' .. tostring( exportSession:countRenditions() ) .. ' 件 ）'  }
+	local progressScope	= exportContext:configureProgress { title = 'フォルダー自動振り分け書き出し（ ' .. tostring( exportSession:countRenditions() ) .. ' 件 ）'  }
 
 	local fileCount		= 0
 
@@ -122,13 +122,13 @@ function FolderArrangingExportTask.processRenderedPhotos( functionContext, expor
 		folderName		= lrPathUtils.parent( rendition.destinationPath )
 		fileBaseName	= getBaseName( rendition.destinationPath )
 		fileExtention	= lrPathUtils.extension( rendition.destinationPath )
-		-- 仕分けルールで指定されたメタデータを取得
+		-- 振り分けルールで指定されたメタデータを取得
 		arrangeRule1 = getArrangeRule( exportParams.arrangeRuleChoise1 , exportParams.arrangeRuleCustomText1 , exportPhoto )
 		arrangeRule2 = getArrangeRule( exportParams.arrangeRuleChoise2 , exportParams.arrangeRuleCustomText2 , exportPhoto )
 		arrangeRule3 = getArrangeRule( exportParams.arrangeRuleChoise3 , exportParams.arrangeRuleCustomText3 , exportPhoto )
 		arrangeRule4 = getArrangeRule( exportParams.arrangeRuleChoise4 , exportParams.arrangeRuleCustomText4 , exportPhoto )
 		arrangeRule5 = getArrangeRule( exportParams.arrangeRuleChoise5 , exportParams.arrangeRuleCustomText5 , exportPhoto )
-		-- 仕分けルールに基づいて仕分け先フォルダーを生成
+		-- 振り分けルールに基づいて振り分け先フォルダーを生成
 		newFullPath		= folderName
 		if arrangeRule1 ~= '' and arrangeRule1 ~= nil then
 			newFullPath	= lrPathUtils.child( newFullPath , arrangeRule1 )
